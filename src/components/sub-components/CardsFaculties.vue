@@ -56,7 +56,8 @@ export default {
 
 .wrapper-border {
     width: 100%;
-    border: 1px solid $border-color-grey;
+
+    box-shadow: 0px 0px 40px 4px rgb(220, 220, 220);
 
     .wrapper-card {
         width: 90%;

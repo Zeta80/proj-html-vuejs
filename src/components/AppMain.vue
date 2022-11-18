@@ -1,9 +1,9 @@
 <script>
-import ImageText from './sub-components/ImageText.vue';
+import SectionFaculty from './section-components/SectionFaculty.vue';
 export default {
     name: "AppMain",
     components: {
-        ImageText
+        SectionFaculty
     },
     data() {
         return {
@@ -17,8 +17,7 @@ export default {
 </script>
 
 <template>
-
-    <ImageText />
+    <SectionFaculty />
 
 </template>
 

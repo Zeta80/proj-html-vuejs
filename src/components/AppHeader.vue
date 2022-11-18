@@ -21,6 +21,7 @@ export default {
         <div class="image-border">
             <img src="../assets/assets/edu/img/Wave-1.png" alt="">
         </div>
+
         <div class="wrapper-background">
 
             <div class="header-top d-flex ">
@@ -81,15 +82,31 @@ header {
 
     .image-border {
         position: absolute;
+        right: 0;
+        left: 0;
         bottom: 0;
+        z-index: 998;
     }
 
-
     .wrapper-background {
+        position: relative;
+
+
         padding: 2rem 0;
-        background-image: url(../assets/assets/edu/img/theme_slider2_bg-1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+
+
+        &::before {
+            content: "";
+            background-image: url(../assets/assets/edu/img/theme_slider2_bg-1.jpg);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-size: cover;
+            opacity: 0.2;
+        }
 
     }
 

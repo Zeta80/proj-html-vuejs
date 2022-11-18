@@ -13,6 +13,9 @@ export default {
     methods: {
         getImgUrl(index) {
             return new URL(`../../assets/assets/edu/img/${this.store.faculties[index].img}`, import.meta.url).href;
+        },
+        getActiveImgUrl(index) {
+            return new URL(`../../assets/assets/edu/img/${this.store.faculties[index].imgActive}`, import.meta.url).href;
         }
     }
 }
@@ -29,13 +32,21 @@ export default {
                         <p> {{ fac.title }} </p>
                     </div>
                 </div>
-
             </div>
         </div>
 
 
-    </div>
 
+    </div>
+    <div class="container">
+        <div v-for="(facActive, index ) in store.faculties">
+            <div v-if="facActive.active">
+                <img :src="getActiveImgUrl(index)" alt="">
+                <h3>{{ facActive.title }}</h3>
+                <p>{{ facActive.text }}</p>
+            </div>
+        </div>
+    </div>
 
 
 </template>

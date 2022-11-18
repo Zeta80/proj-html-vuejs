@@ -63,8 +63,6 @@ export default {
     }
 }
 
-
-
 .uni_year {
     width: 90%;
     margin: 0.8rem auto;

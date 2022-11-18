@@ -22,14 +22,14 @@ export default {
     <div class="wrapper-border">
         <div class="container">
             <div class="wrapper-card">
-                <div class="row row-cols-sd-2 row-cols-md-5">
+                <div class="row row-cols-2 row-cols-md-5">
                     <div :class="(fac.active == true ? `active` : `no-active`)" v-for="(fac, index ) in store.faculties"
-                        :key="index" class="col my-card">
+                        :key="index" class="col d-flex my-card ">
                         <img :src="getImgUrl(index)" alt="">
                         <p> {{ fac.title }} </p>
                     </div>
-
                 </div>
+
             </div>
         </div>
 
@@ -54,7 +54,16 @@ export default {
 
         .my-card {
             border-left: 1px solid $border-color-grey;
+            padding: 1rem 1rem;
             cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                margin-bottom: 0;
+                margin-top: 1rem;
+            }
 
             &:last-child {
                 border-right: 1px solid $border-color-grey;

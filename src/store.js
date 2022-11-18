@@ -39,7 +39,25 @@ export const store = reactive({
             active: false,
         },
 
-    ]
+    ],
+    upcomingEvents: [
+        {
+            title: "Coaching Session",
+            date: "20 May 21:30 PM",
+            text: "lorem lorem lorem lorem lorem lorem"
+        },
+        {
+            title: "Coaching Session",
+            date: "20 May 21:30 PM",
+            text: "lorem lorem lorem lorem lorem lorem"
+        },
+        {
+            title: "Coaching Session",
+            date: "20 May 21:30 PM",
+            text: "lorem lorem lorem lorem lorem lorem"
+        },
+    ],
+
 
 
 

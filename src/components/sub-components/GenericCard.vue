@@ -1,13 +1,17 @@
 <script>
-import { store } from "../../store";
+
 export default {
     name: "GenericCard",
+    props: {
+        item: Object,
+    },
     components: {
 
     },
     data() {
+        debugger
         return {
-            store
+
         }
     },
     methods: {
@@ -19,21 +23,15 @@ export default {
 <template>
     <div class="wrapper-background">
 
-        <div class="container">
-            <div class="title-event text-center">
-                <h3>Upcoming Events</h3>
+        <div>
+            <div>
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.date }}</p>
+                <p>{{ item.text }}</p>
+                <p>{{ item.teacher }}</p>
+                <p>{{ item.price }}</p>
             </div>
-            <div class="row row-cols-3 g-4">
-                <div v-for="item in store.upcomingEvents" class="col text-center my-col">
-                    <h4>{{ item.title }}</h4>
-                    <p>{{ item.date }}</p>
-                    <p>{{ item.text }}</p>
-                </div>
-            </div>
-
         </div>
-
-
     </div>
 
 

@@ -26,7 +26,20 @@ export default {
     </div>
     <div class="wrapper-background">
         <UniversityYearDate />
-        <GenericCard />
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col" v-for="(item, index) in store.upcomingEvents" :key="index">
+                    <GenericCard :item="item" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="buttons">
+            <button class="btn btn-primary">Lorem</button>
+        </div>
     </div>
     <div class="wave wave-bot">
         <img src="../../assets/assets/edu/svg/svg-1.svg" alt="">

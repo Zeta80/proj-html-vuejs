@@ -32,6 +32,7 @@ export default {
 
             <CardsFaculties />
 
+
         </div>
 
     </div>

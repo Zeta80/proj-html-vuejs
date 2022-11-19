@@ -1,11 +1,13 @@
 <script>
 import SectionFaculty from './section-components/SectionFaculty.vue';
 import SectionYear from './section-components/SectionYear.vue';
+import SectionCourses from './section-components/SectionCourses.vue';
 export default {
     name: "AppMain",
     components: {
         SectionFaculty,
-        SectionYear
+        SectionYear,
+        SectionCourses
     },
     data() {
         return {
@@ -21,7 +23,7 @@ export default {
 <template>
     <SectionFaculty />
     <sectionYear />
-
+    <SectionCourses />
 
 </template>
 

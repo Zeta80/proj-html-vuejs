@@ -1,2 +1,3 @@
 cambiare v-for generic card e metterlo al padre passando oggetto con props  [X]
 dare dettagli alle genericcard
+cambiare v-for in imagetext

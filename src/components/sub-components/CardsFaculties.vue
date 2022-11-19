@@ -12,10 +12,10 @@ export default {
     },
     methods: {
         getImgUrl(index) {
-            return new URL(`../../assets/assets/edu/img/${this.store.faculties[index].img}`, import.meta.url).href;
+            return new URL(`../../assets/assets/edu/img/${this.store.facultiesArray[index].img}`, import.meta.url).href;
         },
         getActiveImgUrl(index) {
-            return new URL(`../../assets/assets/edu/img/${this.store.faculties[index].imgActive}`, import.meta.url).href;
+            return new URL(`../../assets/assets/edu/img/${this.store.facultiesArray[index].imgActive}`, import.meta.url).href;
         }
     }
 }
@@ -26,8 +26,8 @@ export default {
         <div class="container">
             <div class="wrapper-card">
                 <div class="row row-cols-2 row-cols-md-5">
-                    <div :class="(fac.active == true ? `active` : `no-active`)" v-for="(fac, index ) in store.faculties"
-                        :key="index" class="col d-flex my-card ">
+                    <div :class="(fac.active == true ? `active` : `no-active`)"
+                        v-for="(fac, index ) in store.facultiesArray" :key="index" class="col d-flex my-card ">
                         <img :src="getImgUrl(index)" alt="">
                         <p> {{ fac.title }} </p>
                     </div>
@@ -39,7 +39,7 @@ export default {
 
     </div>
     <div class="container">
-        <div v-for="(facActive, index ) in store.faculties">
+        <div v-for="(facActive, index ) in store.facultiesArray">
             <div v-if="facActive.active">
                 <img :src="getActiveImgUrl(index)" alt="">
                 <h3>{{ facActive.title }}</h3>

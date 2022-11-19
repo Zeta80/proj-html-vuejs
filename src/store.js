@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 
 export const store = reactive({
-    faculties: [
+    facultiesArray: [
         {
             img: "Gavel-v2.png",
             imgActive: "Gavel-Illustration-e1556884768193.png",
@@ -56,6 +56,39 @@ export const store = reactive({
             date: "20 May 21:30 PM",
             text: "lorem lorem lorem lorem lorem lorem"
         },
+    ],
+    coursesArray: [
+        {
+            img: "Decisions-icon.png",
+            title: "Make Better Decision",
+            teacher: "James Colins",
+            price: "$21.00",
+
+        },
+        {
+            img: "Speaker-icon.png",
+            title: "How to be a speaker",
+            teacher: "James Colins",
+            price: "Free",
+
+        },
+        {
+            img: "Network-icon.png",
+            title: "Network Introduction",
+            teacher: "James Colins",
+            price: "Free",
+
+        },
+        {
+            img: "Brand-icon.png",
+            title: "Brand Management",
+            teacher: "James Colins",
+            price: "Free",
+
+        },
+
+
+
     ],
 
 

@@ -48,12 +48,12 @@ export const store = reactive({
         },
         {
             title: "Coaching Session",
-            date: "20 May 21:30 PM",
+            date: "24 May 18.00 PM",
             text: "lorem lorem lorem lorem lorem lorem"
         },
         {
             title: "Coaching Session",
-            date: "20 May 21:30 PM",
+            date: "12 Feb 13.30 PM",
             text: "lorem lorem lorem lorem lorem lorem"
         },
     ],

@@ -25,8 +25,8 @@ export default {
         <img src="../../assets/assets/edu/svg/svg-0.svg" alt="">
     </div>
     <div class="wrapper-background">
-        <UniversityYearDate />
 
+        <UniversityYearDate />
 
         <div class="container">
             <div class="row">
@@ -35,7 +35,6 @@ export default {
                 </div>
             </div>
         </div>
-
 
         <div class="buttons">
             <button class="btn btn-primary">Lorem</button>

@@ -12,7 +12,16 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            description: {
+
+                descriptionImg: 'Exam-Illustration.png',
+                descriptionTitle: 'The most efficent examination method',
+                descriptionText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam deserunt labore ipsa fugit nihil vitae ex tenetur rerum aspernatur voluptates autem sit quam animi fuga nemo maiores eveniet suscipit voluptatum atque sint excepturi, maxime aperiam. Assumenda tenetur dolorem accusamus officia? Quod excepturi laudantium consequatur nulla quo reprehenderit accusantium distinctio?',
+                descriptionButton: 'Discover the Method',
+                imgFirst: false
+
+            }
         }
     },
     methods: {
@@ -23,7 +32,7 @@ export default {
 
 <template>
     <div class="wrapper">
-        <ImageText />
+        <ImageText :item="description" />
         <div class="faculties">
 
             <h3>Faculties available at Eduprime</h3>

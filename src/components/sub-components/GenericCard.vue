@@ -23,7 +23,7 @@ export default {
     <div class="wrapper-background">
 
         <div>
-            <div>
+            <div class="my_card">
                 <h4>{{ item.title }}</h4>
                 <p>{{ item.date }}</p>
                 <p>{{ item.text }}</p>
@@ -40,12 +40,11 @@ export default {
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 
-.wrapper-background {
-
-    .my-col {
-        background-color: $fill-color-white;
-        color: $text-color-mblack;
-        border-radius: 30px;
-    }
+.my_card {
+    background-color: $fill-color-white;
+    color: $text-color-mblack;
+    text-align: center;
+    padding: 2rem 0.8rem;
+    border-radius: 25px;
 }
 </style>

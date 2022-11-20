@@ -11,7 +11,25 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            description: [
+                {
+                    descriptionImg: 'Exam-Illustration.png',
+                    descriptionTitle: 'The most efficent examination method',
+                    descriptionText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam deserunt labore ipsa fugit nihil vitae ex tenetur rerum aspernatur voluptates autem sit quam animi fuga nemo maiores eveniet suscipit voluptatum atque sint excepturi, maxime aperiam. Assumenda tenetur dolorem accusamus officia? Quod excepturi laudantium consequatur nulla quo reprehenderit accusantium distinctio?',
+                    descriptionButton: 'Discover the Method',
+                    imgFirst: false
+
+                },
+                {
+                    descriptionImg: 'Girl-Illustration.png',
+                    descriptionTitle: 'Variable fees for international students',
+                    descriptionText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam deserunt labore ipsa fugit nihil vitae ex tenetur rerum aspernatur voluptates autem sit quam animi fuga nemo maiores eveniet suscipit voluptatum atque sint excepturi, maxime aperiam. Assumenda tenetur dolorem accusamus officia? Quod excepturi laudantium consequatur nulla quo reprehenderit accusantium distinctio?',
+                    descriptionButton: 'List of Fees',
+                    imgFirst: true
+                },
+            ],
+
         }
     },
     methods: {
@@ -27,12 +45,13 @@ export default {
             <div class="row">
                 <div class="col" v-for="(item, index) in store.coursesArray" :key="index">
                     <GenericCard :item="item" />
+
                 </div>
             </div>
 
 
 
-            <ImageText />
+            <ImageText v-for="(item, index) in description" :key="index" :item="item" />
 
         </div>
     </div>

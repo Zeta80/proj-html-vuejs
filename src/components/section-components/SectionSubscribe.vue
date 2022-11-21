@@ -33,7 +33,9 @@ export default {
                         <div class="container__item">
                             <form class="form">
                                 <input type="email" class="form__field" placeholder="Your E-Mail Address" />
-                                <button type="button" class="btn btn_primary btn_inside uppercase">Send</button>
+                                <button type="button" class="btn btn_primary btn_inside uppercase">
+                                    <i class="fa fa-telegram" style="font-size:24px"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -54,13 +56,13 @@ export default {
     align-items: center;
     padding: 2rem 0;
 
-    h3 {
-        color: $text-color-white;
-    }
-
     &-background {
         background-color: $fill-color-red;
+        margin-bottom: 3rem;
+    }
 
+    h3 {
+        color: $text-color-white;
     }
 
 }

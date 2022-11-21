@@ -3,13 +3,15 @@ import SectionFaculty from './section-components/SectionFaculty.vue';
 import SectionYear from './section-components/SectionYear.vue';
 import SectionCourses from './section-components/SectionCourses.vue';
 import SectionSubscribe from './section-components/SectionSubscribe.vue';
+import SectionPartners from './section-components/SectionPartners.vue';
 export default {
     name: "AppMain",
     components: {
         SectionFaculty,
         SectionYear,
         SectionCourses,
-        SectionSubscribe
+        SectionSubscribe,
+        SectionPartners
     },
     data() {
         return {
@@ -27,6 +29,7 @@ export default {
     <sectionYear />
     <SectionCourses />
     <SectionSubscribe />
+    <SectionPartners />
 
 </template>
 

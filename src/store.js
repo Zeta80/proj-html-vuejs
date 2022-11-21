@@ -110,11 +110,45 @@ export const store = reactive({
         img: ["partner-1.png", "partner-2.png", "partner-3.png", "partner-4.png", "partner-5.png", "partner-6.png", "partner-7.png", "partner-8.png"]
     },
 
+    footerLink: [
+        {
+            title: "Get Eduprime",
+            links: [
+                "request a website",
+                "Browse Themes",
+                "Payment options",
+                "Support System",
+                "Checkout",
+                "Purchase Theme",
+            ]
+        },
+        {
+            title: "Networking",
+            links: [
+                "Purchase Theme",
+                "Our Benefits",
+                "Our Teams",
+                "Our Services",
+                "Other Products",
+                "My account",
+            ]
+        },
 
 
+    ],
 
+    footerCategory: {
 
-
+        categories: [
+            "ECONOMY",
+            "DESIGN",
+            "CHOACHING",
+            "BUSINESS",
+            "MEDICINE",
+            "LAW",
+            "FITNESS",
+        ],
+    },
 
 
 

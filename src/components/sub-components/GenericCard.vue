@@ -4,6 +4,7 @@ export default {
     name: "GenericCard",
     props: {
         item: Object,
+        img: String
     },
     components: {
 
@@ -14,6 +15,9 @@ export default {
         }
     },
     methods: {
+        getImgUrl() {
+            return new URL(`../../assets/assets/edu/img/${this.item.img}`, import.meta.url).href;
+        },
 
     }
 }
@@ -22,13 +26,15 @@ export default {
 <template>
     <div class="wrapper-background">
 
-        <div>
-            <div class="my_card">
+        <div class="pudding">
+            <div :class="!item.price ? `false-shadow` : `true-shadow`" class="my_card">
+                <img :src="getImgUrl()" alt="">
                 <h4>{{ item.title }}</h4>
                 <p>{{ item.date }}</p>
                 <p>{{ item.text }}</p>
                 <p>{{ item.teacher }}</p>
                 <p>{{ item.price }}</p>
+                <button class="btn btn-primary my_btn my_btn_course">{{ item.descriptionButton }}</button>
             </div>
         </div>
     </div>
@@ -40,11 +46,41 @@ export default {
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 
+.pudding {
+    padding-bottom: 30px;
+}
+
 .my_card {
+    position: relative;
     background-color: $fill-color-white;
     color: $text-color-mblack;
     text-align: center;
     padding: 2rem 0.8rem;
     border-radius: 25px;
+
+
+
+
+    img {
+        width: 30%;
+        min-width: 50px;
+    }
+
+    &.true-shadow {
+        box-shadow: 0px 0px 15px 1px rgb(220, 220, 220);
+
+
+
+    }
+
+    .my_btn_course {
+        box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.279);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+
+    }
+
 }
 </style>

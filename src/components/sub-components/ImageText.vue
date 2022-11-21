@@ -14,6 +14,9 @@ export default {
         }
     },
     methods: {
+        getImgUrl() {
+            return new URL(`../../assets/assets/edu/img/${this.item.descriptionImg}`, import.meta.url).href;
+        },
 
     }
 }
@@ -28,10 +31,10 @@ export default {
                 <div class="text">
                     <h2>{{ item.descriptionTitle }}</h2>
                     <p>{{ item.descriptionText }}</p>
-                    <button class="btn btn-primary"> {{ item.descriptionButton }}</button>
+                    <button class="btn btn-primary my_btn"> {{ item.descriptionButton }}</button>
                 </div>
                 <div class="img">
-                    <img src="../../assets/assets/edu/img/Graduation-Illustration.png" alt="">
+                    <img :src="getImgUrl()" alt="">
                 </div>
             </div>
 
@@ -42,12 +45,12 @@ export default {
             <div class="wrapper d-flex ">
 
                 <div class="img">
-                    <img src="../../assets/assets/edu/img/Graduation-Illustration.png" alt="">
+                    <img :src="getImgUrl()" alt="">
                 </div>
                 <div class="text">
                     <h2>{{ item.descriptionTitle }}</h2>
                     <p>{{ item.descriptionText }}</p>
-                    <button class="btn btn-primary"> {{ item.descriptionButton }}</button>
+                    <button class="btn btn-primary my_btn"> {{ item.descriptionButton }}</button>
                 </div>
             </div>
 

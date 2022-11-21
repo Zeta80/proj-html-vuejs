@@ -51,6 +51,7 @@ export default {
                 <img :src="getActiveImgUrl(index)" alt="">
                 <h3>{{ facActive.title }}</h3>
                 <p>{{ facActive.text }}</p>
+                <button class="btn primary-btn my_btn">{{ facActive.textButton }}</button>
             </div>
         </div>
     </div>
@@ -70,6 +71,7 @@ export default {
         width: 90%;
         margin: 0 auto;
         text-align: center;
+
 
         .my-card {
             border-left: 1px solid $border-color-grey;

@@ -1,6 +1,16 @@
+@use "../styles/partials/variables" as *;
 @import "/node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/fontawesome/generate.js";
+
 
 img {
     max-width: 100%;
     object-fit: cover;
+}
+
+.my_btn {
+    border: none;
+    border-radius: 30px;
+    background-color: $fill-color-red;
+    color: white;
 }

@@ -42,9 +42,9 @@ export default {
     <div class="container">
 
         <div class="wrapper">
-            <div class="row">
+            <div class="row row-cols-2 row-cols-md-4 margin_bot">
                 <div class="col" v-for="(item, index) in store.coursesArray" :key="index">
-                    <GenericCard :item="item" />
+                    <GenericCard :item="item" :img="`../../assets/assets/edu/img/${{ item }} `" />
 
                 </div>
             </div>
@@ -60,5 +60,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+.margin_bot {
+    margin-bottom: 3rem;
+}
 </style>

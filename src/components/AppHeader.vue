@@ -1,5 +1,5 @@
 <script>
-
+import { store } from "../store";
 export default {
     name: "AppHeader",
     components: {
@@ -7,7 +7,7 @@ export default {
     },
     data() {
         return {
-
+            store
         }
     },
     methods: {
@@ -33,15 +33,19 @@ export default {
 
                 <div class="header-links d-flex">
                     <ul class="d-flex">
-                        <li> <a href="">lorem</a> </li>
-                        <li> <a href="">lorem</a> </li>
-                        <li> <a href="">lorem</a> </li>
-                        <li> <a href="">lorem</a> </li>
-                        <li> <a href="">lorem</a> </li>
-                        <li> <a href="">lorem</a> </li>
-                        <li> <a href="">lorem</a> </li>
+                        <li class="dropdown" v-for="(link, index) in store.navLink" :key="index">
+                            <a v-if="!link.links" href="">{{ link.title }}</a>
+                            <a v-else href="">{{ link.title }} <span><i class="fa-solid fa-caret-down"></i></span></a>
+                            <div class="dropdown-content">
+
+                                <div v-for="(links, index) in link.links" :key="index">
+                                    <a href="#">{{ links }}</a>
+
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                    <button class="btn btn-primary"> lorem </button>
+                    <button class="btn btn-primary my_btn-yellow"> view courses </button>
                 </div>
 
 
@@ -53,8 +57,7 @@ export default {
                 <div class="jumbo-text d-flex justify-content-center">
                     <h1>Key to your succes</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque similique deleniti magni quos!
-                        Molestiae autem, temporibus beatae perferendis consequatur officia rerum culpa, voluptate
-                        tempore nulla necessitatibus fuga! Quod, est! Dolorem?
+                        Molestiae autem, temporibus beatae
                     </p>
                     <div class="buttons d-flex">
                         <button class="btn btn-primary my_btn my_btn-yellow">
@@ -111,12 +114,11 @@ header {
 
     }
 
-
     //header con link e logo
     .header-top {
         position: relative;
         height: $header-heigts;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         justify-content: space-between;
 
@@ -127,17 +129,59 @@ header {
             }
         }
 
-        ul {
-            opacity: 1;
-            align-items: center;
-            margin-bottom: 0;
+        .header-links {
+            width: 80%;
+            display: flex;
+            justify-content: end;
+            color: $text-color-white;
 
-            li {
-                list-style-type: none;
+            .dropdown {
+                position: relative;
 
-                a {
-                    text-decoration: inherit;
-                    margin-right: 0.7rem;
+                span {
+                    display: inline-block;
+                    font-size: 10px;
+                }
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                height: 100%;
+                //     background-color: #f9f9f9;
+                //     min-width: 160px;
+                //     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                margin-bottom: 3px;
+                //     float: none;
+                //     color: black;
+                //     padding: 12px 16px;
+                //     text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            ul {
+                opacity: 1;
+                align-items: center;
+                margin-bottom: 0;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        text-decoration: inherit;
+                        color: inherit;
+                        margin-right: 0.7rem;
+                        margin-left: 4px;
+                    }
                 }
             }
         }
@@ -149,11 +193,6 @@ header {
         width: 100%;
         height: 500px;
 
-
-
-        // img {
-        //     opacity: 0.2;
-        // }
         .jumbo-text {
             width: 50%;
             height: 100%;
@@ -162,6 +201,13 @@ header {
             flex-direction: column;
             align-items: center;
             color: $text-color-white;
+
+            h1 {
+                margin-bottom: 2rem;
+                font-size: 50px;
+                font-weight: bold;
+            }
+
         }
     }
 
@@ -172,6 +218,8 @@ header {
         &-yellow {
             color: $text-color-white;
             background-color: $border-color-yellow;
+            border-radius: 30px;
+            border: none;
 
             &:hover {
                 background-color: #da292b;

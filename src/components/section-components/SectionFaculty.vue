@@ -20,7 +20,9 @@ export default {
                 descriptionText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam deserunt labore ipsa fugit nihil vitae ex tenetur rerum aspernatur voluptates autem sit quam animi fuga nemo maiores eveniet suscipit voluptatum atque sint excepturi, maxime aperiam. Assumenda tenetur dolorem accusamus officia? Quod excepturi laudantium consequatur nulla quo reprehenderit accusantium distinctio?',
                 descriptionButton: 'Browse through courses',
                 imgFirst: false,
-                buttonYellow: true
+                buttonYellow: true,
+                imgSpan: 'Books-icon.png'
+
 
             }
         }
@@ -57,6 +59,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../../styles/partials/variables" as *;
+
 .wrapper {
     position: relative;
 
@@ -78,11 +82,13 @@ export default {
 
             p {
                 font-size: 15px;
+                color: $text-color-mgray;
             }
         }
 
         h3 {
             font-size: 45px;
+            font-weight: bold;
             margin-bottom: 1rem;
         }
     }

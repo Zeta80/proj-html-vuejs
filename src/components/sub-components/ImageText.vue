@@ -84,6 +84,16 @@ export default {
 
     .text {
         width: 50%;
+
+        h2 {
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            color: $text-color-mgray;
+            margin-bottom: 2rem;
+        }
     }
 
     .img {

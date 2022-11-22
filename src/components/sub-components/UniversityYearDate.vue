@@ -72,6 +72,7 @@ export default {
 
     h3 {
         font-size: 35px;
+        font-weight: bold;
         margin-bottom: 4rem;
 
         span {

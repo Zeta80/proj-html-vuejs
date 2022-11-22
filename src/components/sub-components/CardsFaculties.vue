@@ -126,4 +126,14 @@ export default {
         color: $text-color-white;
     }
 }
+
+.active-item {
+    h3 {
+        font-weight: bold;
+    }
+
+    p {
+        color: $text-color-lgray;
+    }
+}
 </style>

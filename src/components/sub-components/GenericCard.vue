@@ -26,21 +26,19 @@ export default {
 
 <template>
     <div class="wrapper-background">
-
-
-
-
         <div class="pudding">
             <div :class="!item.price ? `false-shadow` : `true-shadow`" class="my_card">
                 <img :src="getImgUrl()" alt="">
-                <h4>{{ item.title }}</h4>
-                <p>{{ item.date }}</p>
+                <h4 class="title">{{ item.title }}</h4>
+                <p v-if="item.date"> <span><i class="fa-solid fa-calendar-days"></i></span> {{ item.date }}</p>
                 <p>{{ item.text }}</p>
-                <p> <span><i class="fa-solid fa-user-large"></i></span> <span>Teacher:</span> {{ item.teacher }}</p>
-                <p> <span><i class="fa-solid fa-money-bill"></i></span> <span>Price:</span> {{ item.price }}</p>
-                <button v-if="item.teacher" class="btn btn-primary my_btn my_btn_course"> <span><i
-                            class="fa-solid fa-eye"></i></span> {{ item.descriptionButton
-                            }}</button>
+                <p v-if="item.teacher"> <span><i class="fa-solid fa-user-large"></i></span> <span>Teacher:</span>
+                    {{ item.teacher }}</p>
+                <p v-if="item.price"> <span><i class="fa-solid fa-money-bill"></i></span> <span>Price:</span>
+                    {{ item.price }}</p>
+                <button v-if="item.teacher" class="btn btn-primary my_btn my_btn_course"> <span>
+                        <i class="fa-solid fa-eye"></i></span>
+                    {{ item.descriptionButton }}</button>
                 <button v-else class="btn btn-primary my_btn my_btn_course"> <span><i
                             class="fa-solid fa-plus"></i></span> {{ item.descriptionButton }}</button>
             </div>
@@ -67,6 +65,15 @@ export default {
     padding: 2rem 0.8rem;
     border-radius: 25px;
 
+    .title {
+        margin-top: 1rem;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    p {
+        color: $text-color-lgray;
+    }
 
 
 
@@ -88,6 +95,7 @@ export default {
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 50%);
+        font-size: 14px;
 
 
         &:hover {

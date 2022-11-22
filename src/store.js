@@ -155,8 +155,8 @@ export const store = reactive({
             title: "Home",
             links: [
                 "lorem",
-                "lorem",
-                "lorem",
+                "looreem",
+                "lorrrem",
 
             ]
         },

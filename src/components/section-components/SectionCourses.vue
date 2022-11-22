@@ -73,7 +73,7 @@ export default {
         margin: 5rem 0 3rem 0;
 
         h3 {
-
+            font-weight: bold;
             font-size: 35px;
         }
     }

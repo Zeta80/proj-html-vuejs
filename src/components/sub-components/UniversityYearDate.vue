@@ -17,7 +17,7 @@ export default {
 
 <template>
     <div class="my_title text-center ">
-
+        <span class="img-title"><img src="../../assets/assets/edu/img/Clock-and-Bell.png" alt=""></span>
         <h3> <span>University Year</span> </h3>
     </div>
     <div class="container">
@@ -56,10 +56,28 @@ export default {
 @use "../../styles/partials/variables" as *;
 
 .my_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-title {
+        margin-bottom: 10px;
+
+        img {
+            width: 50px;
+
+        }
+    }
+
     h3 {
+        font-size: 35px;
+        margin-bottom: 4rem;
+
         span {
             background-color: #da292b;
         }
+
     }
 }
 

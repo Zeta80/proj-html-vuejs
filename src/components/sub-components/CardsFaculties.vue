@@ -47,12 +47,19 @@ export default {
     </div>
     <div class="container">
         <div v-for="(facActive, index ) in store.facultiesArray">
-            <div v-if="facActive.active">
+
+            <div class="active-item d-flex justify-content-center mb-5" v-if="facActive.active">
                 <img :src="getActiveImgUrl(index)" alt="">
-                <h3>{{ facActive.title }}</h3>
-                <p>{{ facActive.text }}</p>
-                <button class="btn primary-btn my_btn">{{ facActive.textButton }}</button>
+                <div class="text d-flex flex-column justify-content-center text-start">
+                    <h3>{{ facActive.title }}</h3>
+                    <p>{{ facActive.text }}</p>
+                    <div class="buttons">
+
+                        <button class="btn primary-btn my_btn">{{ facActive.textButton }}</button>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -71,6 +78,7 @@ export default {
         width: 90%;
         margin: 0 auto;
         text-align: center;
+        margin-bottom: 6rem;
 
 
         .my-card {
@@ -80,6 +88,8 @@ export default {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            color: $text-color-red;
+
 
             p {
                 margin-bottom: 0;
@@ -105,6 +115,12 @@ export default {
                 max-width: 90px;
             }
         }
+    }
+}
+
+.active-item {
+    .text {
+        margin-left: 50px;
     }
 }
 </style>

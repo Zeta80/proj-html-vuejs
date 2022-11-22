@@ -24,11 +24,15 @@ export default {
     <div class="wave wave-top">
         <img src="../../assets/assets/edu/svg/svg-0.svg" alt="">
     </div>
-    <div class="wrapper-background">
+    <div class="wrapper-background padding">
 
         <UniversityYearDate />
 
         <div class="container">
+            <div class="title-events ">
+                <span><img src="../../assets/assets/edu/img/upcoming-events-calendar-icon.png" alt=""></span>
+                <h3 class="text-center">Upcoming Events </h3>
+            </div>
             <div class="row">
                 <div class="col" v-for="(item, index) in store.upcomingEvents" :key="index">
                     <GenericCard :item="item" />
@@ -37,7 +41,7 @@ export default {
         </div>
 
         <div class="buttons">
-            <button class="btn btn-primary">Lorem</button>
+            <button class="btn btn-primary my_btn ">Lorem</button>
         </div>
     </div>
     <div class="wave wave-bot">
@@ -52,6 +56,50 @@ export default {
     background-color: $fill-color-red;
     color: $text-color-white;
     padding: 2rem;
+
+    &.padding {
+        padding: 7rem;
+    }
+
+
+
+    .title-events {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 0 50px 0;
+
+        h3 {
+
+            font-size: 35px;
+        }
+
+        span {
+            margin-bottom: 10px;
+
+            img {
+                width: 50px;
+            }
+        }
+
+
+
+
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+
+        .my_btn {
+            background-color: $border-color-yellow ;
+            padding: 0.9rem 2rem;
+
+        }
+
+    }
+
 
     .wave {
 

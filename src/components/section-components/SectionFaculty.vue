@@ -16,10 +16,11 @@ export default {
             description: {
 
                 descriptionImg: 'Graduation-Illustration.png',
-                descriptionTitle: 'The most efficent examination method',
+                descriptionTitle: 'Thousand of courses for any type of student',
                 descriptionText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam deserunt labore ipsa fugit nihil vitae ex tenetur rerum aspernatur voluptates autem sit quam animi fuga nemo maiores eveniet suscipit voluptatum atque sint excepturi, maxime aperiam. Assumenda tenetur dolorem accusamus officia? Quod excepturi laudantium consequatur nulla quo reprehenderit accusantium distinctio?',
-                descriptionButton: 'Discover the Method',
-                imgFirst: false
+                descriptionButton: 'Browse through courses',
+                imgFirst: false,
+                buttonYellow: true
 
             }
         }
@@ -31,13 +32,19 @@ export default {
 </script>
 
 <template>
-    <div class="wrapper">
+    <div class="wrapper ">
+        <div class="wave">
+            <img src="../../assets/assets/edu/img/home-background.png" alt="">
+        </div>
         <ImageText :item="description" />
         <div class="faculties">
 
             <h3>Faculties available at Eduprime</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic facere dolor, possimus modi
-                voluptatum!</p>
+            <div class="text">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium hic facere dolor, possimus modi
+                    voluptatum!</p>
+            </div>
 
             <CardsFaculties />
 
@@ -50,5 +57,35 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.wrapper {
+    position: relative;
 
+    .wave {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    .faculties {
+        margin-top: 2em;
+        text-align: center;
+
+        .text {
+            width: 40%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        h3 {
+            font-size: 45px;
+            margin-bottom: 1rem;
+        }
+    }
+
+}
 </style>

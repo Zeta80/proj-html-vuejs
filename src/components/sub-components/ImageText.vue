@@ -17,6 +17,9 @@ export default {
         getImgUrl() {
             return new URL(`../../assets/assets/edu/img/${this.item.descriptionImg}`, import.meta.url).href;
         },
+        getImgSpanUrl() {
+            return new URL(`../../assets/assets/edu/img/${this.item.imgSpan}`, import.meta.url).href;
+        },
 
     }
 }
@@ -29,9 +32,12 @@ export default {
             <div class="wrapper d-flex ">
 
                 <div class="text">
+                    <span class="img-span"><img :src="getImgSpanUrl()" alt=""></span>
                     <h2>{{ item.descriptionTitle }}</h2>
                     <p>{{ item.descriptionText }}</p>
-                    <button class="btn btn-primary my_btn"> {{ item.descriptionButton }}</button>
+                    <button :class="item.buttonYellow == true ? 'my_btn_yellow' : 'my_btn'" class="btn btn-primary "> {{
+                            item.descriptionButton
+                    }}</button>
                 </div>
                 <div class="img">
                     <img :src="getImgUrl()" alt="">
@@ -48,6 +54,7 @@ export default {
                     <img :src="getImgUrl()" alt="">
                 </div>
                 <div class="text">
+                    <span class="img-span"><img :src="getImgSpanUrl()" alt=""></span>
                     <h2>{{ item.descriptionTitle }}</h2>
                     <p>{{ item.descriptionText }}</p>
                     <button class="btn btn-primary my_btn"> {{ item.descriptionButton }}</button>
@@ -60,12 +67,19 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../../styles/partials/variables" as *;
+
 .wrapper {
     width: 100%;
     justify-content: space-around;
     padding: 3rem 0;
     position: relative;
 
+    .img-span {
+        img {
+            width: 50px;
+        }
+    }
 
 
     .text {
@@ -74,6 +88,17 @@ export default {
 
     .img {
         width: 30%;
+    }
+
+    .my_btn {
+        padding: 0.8rem 2rem;
+    }
+
+    .my_btn_yellow {
+        background-color: $border-color-yellow;
+        border: none;
+        border-radius: 30px;
+        padding: 15px 30px;
     }
 }
 </style>

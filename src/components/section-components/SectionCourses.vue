@@ -18,7 +18,8 @@ export default {
                     descriptionTitle: 'The most efficent examination method',
                     descriptionText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam deserunt labore ipsa fugit nihil vitae ex tenetur rerum aspernatur voluptates autem sit quam animi fuga nemo maiores eveniet suscipit voluptatum atque sint excepturi, maxime aperiam. Assumenda tenetur dolorem accusamus officia? Quod excepturi laudantium consequatur nulla quo reprehenderit accusantium distinctio?',
                     descriptionButton: 'Discover the Method',
-                    imgFirst: false
+                    imgFirst: false,
+                    imgSpan: 'Exam-icon.png'
 
                 },
                 {
@@ -26,7 +27,8 @@ export default {
                     descriptionTitle: 'Variable fees for international students',
                     descriptionText: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam totam deserunt labore ipsa fugit nihil vitae ex tenetur rerum aspernatur voluptates autem sit quam animi fuga nemo maiores eveniet suscipit voluptatum atque sint excepturi, maxime aperiam. Assumenda tenetur dolorem accusamus officia? Quod excepturi laudantium consequatur nulla quo reprehenderit accusantium distinctio?',
                     descriptionButton: 'List of Fees',
-                    imgFirst: true
+                    imgFirst: true,
+                    imgSpan: 'Exam-icon-1.png'
                 },
             ],
 
@@ -42,6 +44,9 @@ export default {
     <div class="container">
 
         <div class="wrapper">
+            <div class="title">
+                <h3>Latest Courses</h3>
+            </div>
             <div class="row row-cols-2 row-cols-md-4 margin_bot">
                 <div class="col" v-for="(item, index) in store.coursesArray" :key="index">
                     <GenericCard :item="item" :img="`../../assets/assets/edu/img/${{ item }} `" />
@@ -60,6 +65,17 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.wrapper {
+    .title {
+        margin: 5rem 0 3rem 0;
+
+        h3 {
+
+            font-size: 35px;
+        }
+    }
+}
+
 .margin_bot {
     margin-bottom: 3rem;
 }

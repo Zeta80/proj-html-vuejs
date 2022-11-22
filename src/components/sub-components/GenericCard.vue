@@ -19,6 +19,7 @@ export default {
             return new URL(`../../assets/assets/edu/img/${this.item.img}`, import.meta.url).href;
         },
 
+
     }
 }
 </script>
@@ -26,17 +27,25 @@ export default {
 <template>
     <div class="wrapper-background">
 
+
+
+
         <div class="pudding">
             <div :class="!item.price ? `false-shadow` : `true-shadow`" class="my_card">
                 <img :src="getImgUrl()" alt="">
                 <h4>{{ item.title }}</h4>
                 <p>{{ item.date }}</p>
                 <p>{{ item.text }}</p>
-                <p>{{ item.teacher }}</p>
-                <p>{{ item.price }}</p>
-                <button class="btn btn-primary my_btn my_btn_course">{{ item.descriptionButton }}</button>
+                <p> <span><i class="fa-solid fa-user-large"></i></span> <span>Teacher:</span> {{ item.teacher }}</p>
+                <p> <span><i class="fa-solid fa-money-bill"></i></span> <span>Price:</span> {{ item.price }}</p>
+                <button v-if="item.teacher" class="btn btn-primary my_btn my_btn_course"> <span><i
+                            class="fa-solid fa-eye"></i></span> {{ item.descriptionButton
+                            }}</button>
+                <button v-else class="btn btn-primary my_btn my_btn_course"> <span><i
+                            class="fa-solid fa-plus"></i></span> {{ item.descriptionButton }}</button>
             </div>
         </div>
+
     </div>
 
 
@@ -79,6 +88,7 @@ export default {
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 50%);
+        padding: 0.8rem 1rem;
 
     }
 

@@ -1,9 +1,10 @@
 <script>
 import { store } from "../store";
+import SearchBar from "../components/sub-components/SearchBar.vue";
 export default {
     name: "AppFooter",
     components: {
-
+        SearchBar
     },
     data() {
         return {
@@ -48,11 +49,19 @@ export default {
                 </div>
                 <!-- sezione search bar -->
                 <!-- BARRA DI IRCEDRCA -->
-                <div class="search-cat">
-                    <h5>Search categories</h5>
-                    <div v-for="(cat, index) in store.footerCategory" :key="index" class="categories">
-                        <button v-for="(link, index) in cat">{{ cat[index] }}</button>
 
+                <div class="search-cat ">
+                    <div class="wrapper-cat d-flex flex-column text-end">
+                        <div class="search-bar">
+                            <SearchBar />
+                        </div>
+                        <h5>Search categories</h5>
+                        <div v-for="(cat, index) in store.footerCategory" :key="index" class="categories">
+                            <button class=" btn  button-categories" v-for="(link, index) in cat">{{
+                                    cat[index]
+                            }}</button>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,11 +76,22 @@ export default {
 .wrapper {
     width: 90%;
     margin: 0 auto;
+    padding-top: 100px;
+    color: $text-color-white;
 
 
 
     .search-cat {
         width: 33%;
+
+        .button-categories {
+            color: $text-color-white;
+            background-color: none;
+            border-color: $fill-color-white;
+            border-radius: 30px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
     }
 
     .link-list {
@@ -90,7 +110,7 @@ export default {
     }
 
     .logo {
-        width: 40%;
+        width: 60%;
         min-height: 50px;
 
         &-social {

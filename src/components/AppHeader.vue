@@ -57,8 +57,9 @@ export default {
                         tempore nulla necessitatibus fuga! Quod, est! Dolorem?
                     </p>
                     <div class="buttons d-flex">
-                        <button class="btn btn-primary">Search</button>
-                        <button class="btn btn-primary">Search</button>
+                        <button class="btn btn-primary my_btn my_btn-yellow">
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span> Search courses</button>
+                        <button class="btn btn-primary my_btn my_btn-white">Apply for university</button>
                     </div>
                 </div>
             </div>
@@ -160,6 +161,21 @@ header {
             text-align: center;
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    .my_btn {
+        margin-left: 10px;
+        padding: 10px 25px;
+
+        &-yellow {
+            color: $text-color-white;
+            background-color: $border-color-yellow;
+        }
+
+        &-white {
+            color: $text-color-red;
+            background-color: $fill-color-white;
         }
     }
 }

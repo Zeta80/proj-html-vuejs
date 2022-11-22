@@ -3,7 +3,6 @@
 
 export default {
     name: "SearchBar",
-
     components: {
 
     },
@@ -28,6 +27,7 @@ export default {
                     <i class="fa-brands fa-telegram" style="font-size:60px"></i>
                 </button>
             </form>
+
         </div>
     </div>
 

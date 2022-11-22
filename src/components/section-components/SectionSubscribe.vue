@@ -6,7 +6,8 @@ import SearchBar from "../sub-components/SearchBar.vue";
 export default {
     name: "SectionSubscribe",
     components: {
-        SearchBar
+        SearchBar,
+
     },
     data() {
         return {

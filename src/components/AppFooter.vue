@@ -8,7 +8,8 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+
         }
     },
     methods: {
@@ -19,7 +20,30 @@ export default {
 
 <template>
 
-    <div class="wrapper-background">
+    <div class="wrapper-background ">
+        <div class="arrow-absolute">
+            <div class="arrow-logo"><i class="fa-solid fa-angle-up"></i></div>
+        </div>
+        <div class="wrapper-purchase">
+            <div class="purchase-area d-flex ">
+                <div class="logo">
+                    <img src="../assets/assets/edu/svg/svg-3.svg" alt="">
+                </div>
+                <div class="text d-flex">
+
+                    <p>Purchase Theme</p>
+                </div>
+            </div>
+            <div class="purchase-area d-flex">
+                <div class="logo">
+                    <img src="../assets/assets/edu/svg/svg-2.svg" alt="">
+                </div>
+                <div class="text d-flex">
+                    <p>Purchase Theme</p>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="wrapper d-flex">
 
@@ -161,6 +185,67 @@ export default {
     &-background {
         min-height: 400px;
         background-color: $fill-color-red;
+        position: relative;
+
+        .arrow-absolute {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+
+            .arrow-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $border-color-yellow;
+
+                font-size: 40px;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $fill-color-red;
+                    box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, 0.262);
+                }
+            }
+        }
+
+        .wrapper-purchase {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+
+            .purchase-area {
+                background-color: black;
+                color: white;
+                width: 150px;
+                align-items: center;
+                vertical-align: middle;
+                margin-bottom: 15px;
+                padding-left: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+
+                .text {
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 10px;
+                    font-size: 10px;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                .logo {
+                    width: 15%;
+                }
+            }
+
+        }
     }
 }
 </style>

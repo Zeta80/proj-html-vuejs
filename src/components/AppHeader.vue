@@ -161,6 +161,7 @@ header {
             text-align: center;
             flex-direction: column;
             align-items: center;
+            color: $text-color-white;
         }
     }
 
@@ -171,11 +172,21 @@ header {
         &-yellow {
             color: $text-color-white;
             background-color: $border-color-yellow;
+
+            &:hover {
+                background-color: #da292b;
+            }
         }
 
         &-white {
             color: $text-color-red;
             background-color: $fill-color-white;
+
+            &:hover {
+                background-color: $fill-color-red;
+                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.211);
+                color: $text-color-white;
+            }
         }
     }
 }

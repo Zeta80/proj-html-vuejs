@@ -150,6 +150,63 @@ export const store = reactive({
         ],
     },
 
+    navLink: [
+        {
+            title: "Home",
+            links: [
+                "lorem",
+                "lorem",
+                "lorem",
+
+            ]
+        },
+        {
+            title: "Courses",
+            links: [
+                "lorem",
+                "lorem",
+                "lorem",
+                "lorem",
+                "lorem",
+
+            ]
+        },
+        {
+            title: "About Us",
+
+        },
+        {
+            title: "News",
+            links: [
+                "lorem",
+                "lorem",
+                "lorem",
+                "lorem",
+
+
+            ]
+        },
+        {
+            title: "Pages",
+            links: [
+                "lorem",
+                "lorem",
+                "lorem",
+
+            ]
+        },
+        {
+            title: "Contact",
+
+        },
+        {
+            title: "Purchase",
+
+        },
+
+
+    ],
+
 
 
 

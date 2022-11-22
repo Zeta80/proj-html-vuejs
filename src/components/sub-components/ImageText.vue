@@ -92,6 +92,10 @@ export default {
 
     .my_btn {
         padding: 0.8rem 2rem;
+
+        &:hover {
+            background-color: $border-color-yellow;
+        }
     }
 
     .my_btn_yellow {
@@ -99,6 +103,10 @@ export default {
         border: none;
         border-radius: 30px;
         padding: 15px 30px;
+
+        &:hover {
+            background-color: #da292b;
+        }
     }
 }
 </style>

@@ -4,6 +4,7 @@ import SectionYear from './section-components/SectionYear.vue';
 import SectionCourses from './section-components/SectionCourses.vue';
 import SectionSubscribe from './section-components/SectionSubscribe.vue';
 import SectionPartners from './section-components/SectionPartners.vue';
+import toolFixed from '../components/sub-components/toolFixed.vue';
 export default {
     name: "AppMain",
     components: {
@@ -11,7 +12,8 @@ export default {
         SectionYear,
         SectionCourses,
         SectionSubscribe,
-        SectionPartners
+        SectionPartners,
+        toolFixed
     },
     data() {
         return {
@@ -25,6 +27,9 @@ export default {
 </script>
 
 <template>
+
+
+    <toolFixed />
     <SectionFaculty />
     <sectionYear />
     <SectionCourses />

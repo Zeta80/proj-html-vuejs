@@ -66,6 +66,9 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
+    width: 90%;
+    margin: 0 auto;
+
     .title {
         margin: 5rem 0 3rem 0;
 

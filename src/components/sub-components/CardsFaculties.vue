@@ -118,9 +118,12 @@ export default {
     }
 }
 
-.active-item {
-    .text {
-        margin-left: 50px;
+.my_btn {
+    padding: 0.8rem 1.5rem;
+
+    &:hover {
+        background-color: $border-color-yellow;
+        color: $text-color-white;
     }
 }
 </style>

@@ -35,7 +35,15 @@ export default {
                             maiores
                             aperiam rem ea amet ipsum illum soluta saepe?</p>
                         <div class="social">
-                            facebook twitter instagram
+                            <div class="social-logo">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="social-logo">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="social-logo">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,6 +99,10 @@ export default {
             border-radius: 30px;
             margin-right: 3px;
             margin-bottom: 5px;
+
+            &:hover {
+                background-color: $border-color-yellow;
+            }
         }
     }
 
@@ -110,13 +122,39 @@ export default {
     }
 
     .logo {
-        width: 60%;
+        width: 80%;
         min-height: 50px;
 
         &-social {
             width: 33%;
             padding-right: 30px;
+
+            .social {
+                display: flex;
+
+                .social-logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    margin-left: 10px;
+
+
+                    text-align: center;
+                    border-radius: 50%;
+                    border: 2px solid $border-color-yellow;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $border-color-yellow;
+                    }
+
+
+                }
+            }
         }
+
     }
 
 

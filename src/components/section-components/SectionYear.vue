@@ -41,7 +41,7 @@ export default {
         </div>
 
         <div class="buttons">
-            <button class="btn btn-primary my_btn ">Lorem</button>
+            <button class="btn btn-primary my_btn ">View All Events</button>
         </div>
     </div>
     <div class="wave wave-bot">
@@ -95,6 +95,11 @@ export default {
         .my_btn {
             background-color: $border-color-yellow ;
             padding: 0.9rem 2rem;
+
+            &:hover {
+                background-color: $fill-color-red;
+                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.211);
+            }
 
         }
 

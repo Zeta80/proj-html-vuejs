@@ -88,7 +88,12 @@ export default {
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 50%);
-        padding: 0.8rem 1rem;
+
+
+        &:hover {
+            background-color: $fill-color-white;
+            color: $text-color-red;
+        }
 
     }
 
